@@ -1,0 +1,16 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %} {{ relevancepage.title }} {% endblock %}
+{% block content %}
+    <div style="text-align: center">
+         {{ relevancepage.text|safe }}
+        <section class="vacancy-graphs">
+            <p>Если вам неудобно просматривать результаты в виде таблиц, наш сайт представляет вам те же данные в виде диаграмм</p>
+            <div style="padding: 30px 10% 0 10%">
+                <img width="48%" src="{{ relevancepage.graph_up.url }}"/>
+                <img width="48%" src="{{ relevancepage.graph_middle.url }}"/>
+                <img width="48%" src="{{ relevancepage.graph_down.url }}"/>
+            </div>
+        </section>
+    </div>
+{% endblock %}
