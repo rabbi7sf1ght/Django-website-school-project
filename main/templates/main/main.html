@@ -12,22 +12,39 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
+<aside class="side-menu">
+    <div class="side-menu-container">
+    <h3 class="navigation"><i class="fa-solid fa-magnifying-glass"></i><span></span> Навигация</h3>
+    <ul class="menu-items">
+        <li class="menu-item">
+            <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i><span></span> О профессии</a>
+        </li>
+        <li class="menu-item">
+            <a href="{% url 'relevance' %}"><i class="fa-solid fa-star"></i><span></span> Востребованность</a>
+        </li>
+        <li class="menu-item">
+            <a href="{% url 'geography' %}"><i class="fa-solid fa-earth-europe"></i><span></span> География</a>
+        </li>
+        <li class="menu-item">
+            <a href="{% url 'skills' %}"><i class="fa-solid fa-compass-drafting"></i><span></span> Навыки</a>
+        </li>
+        <li class="menu-item">
+            <a href="{% url 'last_vacancies' %}"><i class="fa-solid fa-filter"></i><span></span> Последние вакансии</a>
+        </li>
+    </ul>
+    </div>
+</aside>
 <header class="page-header">
-    <h1 class="header-logo"><i class="fa-solid fa-palette"></i>  UX/UI archive</h1>
-    <p class="header-info">Всё важное для UX/UI дизайнеров</p>
+    <div class="header-container">
+        <i class="fa-solid fa-palette fa-5x"></i>
+        <div class="header-text">
+            <h1 class="header-logo">UX/UI archive</h1>
+            <p class="header-info">Архив полезного для UX/UI дизайнеров</p>
+        </div>
+    </div>
     <div class="line"></div>
 </header>
-<aside class="menu-wrap">
-    <h3><i class="fa-solid fa-magnifying-glass"></i> Навигация</h3>
-    <ul class="web-pages">
-        <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> О профессии</a></li>
-        <li><a href="{% url 'relevance' %}"><i class="fa-solid fa-star"></i> Востребованность</a></li>
-        <li><a href="{% url 'geography' %}"><i class="fa-solid fa-earth-europe"></i> География</a></li>
-        <li><a href="{% url 'skills' %}"><i class="fa-solid fa-compass-drafting"></i> Навыки</a></li>
-        <li><a href="{% url 'last_vacancies' %}"><i class="fa-solid fa-filter"></i> Последние вакансии</a></li>
-    </ul>
-</aside>
-<main>
+<main class="page-main">
     {% block content %}
     {% endblock %}
 </main>
@@ -36,7 +53,7 @@
     <ul class="student-info">
         <li class="student-name">Нагнибеда Алиса Александровна</li>
         <li class="student-group">РИ-210941</li>
-        <li class="date">2023</li>
+        <li class="project-date">декабрь 2022 - январь 2023</li>
     </ul>
 </footer>
 </body>

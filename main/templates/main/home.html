@@ -2,8 +2,29 @@
 {% load static %}
 {% block title %} {{ homepage.title }} {% endblock %}
 {% block content %}
-    <div>
-        <img class="home_img" src="{{ homepage.image.url }}" alt="homepage_img">
+    <div style="margin-bottom:40px">
+        <img class="home_img" src="{{ homepage.image.url }}" alt="UX/UI designer" style="margin-top: 20px"><br>
+        <a href="https://ru.freepik.com/free-vector/dropdown-menu-concept-illustration_10838257.htm#query=ux%20ui%20%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80&position=22&from_view=search&track=ais"
+        style="font-size:14px; color: #1F2833">Изображение от storyset  на Freepik</a>
         {{ homepage.text|safe }}
+        <img class="home_img" src="{{ homepage.image_second.url }}" alt="UX/UI designer" style="margin-top: 20px"><br>
+        <a href="https://ru.freepik.com/free-vector/insert-block-concept-illustration_10733825.htm#page=2&query=ux%20ui%20%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80&position=35&from_view=search&track=ais"
+        style="font-size:14px; color: #1F2833">Изображение от storyset  на Freepik</a>
     </div>
+<div style="border: 2px solid #1F2833; border-radius: 10px;padding: 10px; width: 90%; margin:auto; color: #1F2833;">
+    Часть информации, представленной на этой странице, была найдена в следующих источниках: <br>
+    <a style="text-decoration: none; color: #1F2833;"
+       href="https://netology.ru/blog/06-2022-ux-ui-designer">
+        <i class="fa-solid fa-link"></i><span style="margin-right: 5px"></span>Кто такой UX/UI-дизайнер, чем он занимается и
+        почему его работа так важна</a><br>
+    <a style="text-decoration: none; color: #1F2833;"
+       href="https://skillbox.ru/media/design/ux_ui_dizayn_chto_eto_takoe/">
+        <i class="fa-solid fa-link"></i><span style="margin-right: 5px"></span>Что такое UX/UI-дизайн и как попасть в эту
+        профессию</a><br>
+    <a style="text-decoration: none; color: #1F2833;"
+       href="https://practicum.yandex.ru/blog/chto-takoe-ux-ui-dizayn/">
+        <i class="fa-solid fa-link"></i><span style="margin-right: 5px"></span>Что такое UI- и UX-дизайн, чем они отличаются.
+        Принципы и перспективы UI/UX-дизайна</a>
+</div><br>
+<span style="margin-bottom: 40px"></span>
 {% endblock %}

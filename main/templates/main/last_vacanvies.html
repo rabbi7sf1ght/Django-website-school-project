@@ -2,9 +2,19 @@
 {% load static %}
 {% block title %} {{ vacanciespage.title }} {% endblock %}
 {% block content %}
-    <div>
+<div>
+    <h2 style="margin-top: 30px; color: #45A29E; font-size: 36px">Недавние вакансии для UX/UI дизайнера</h2>
+        <p style="margin-top: 20px; margin-bottom: 30px">
+            После того, как самая важная аналитическая информация о профессии создана, можно приступить к поиску
+            реальных вакансий. Как хорошо, что идти на специальные сайты не обязательно, ведь на нашем сайте уже
+            представлен набор из нескольких вакансий, которые могут подходойти UX/UI дизайнеру. Предлагаем вам
+            ознакомиться с набором вакансий за <span style="color: #45A29E">12.01.2023 - 13.01.2023</span> Данные
+            получены при помощи API HH.
+        </p>
+</div>
+    <div style="text-align: center;">
         {% for vacancy in vacancies %}
-            <div>
+            <div style="text-align: start; border: 4px dashed #66FCF1; border-radius: 10px;padding: 25px; width: 90%; margin:auto">
                 <h2>{{ vacancy.name }}</h2><br>
                 <p>{{ vacancy.description|safe }}</p>
                 <p><b>Навыки:</b>{{ vacancy.key_skills }}</p>
@@ -12,8 +22,10 @@
                 <p><b>Оклад:</b> {{ vacancy.salary }}</p>
                 <p><b>Регион:</b> {{ vacancy.area.name }}</p>
                 <p><b>Дата публикации:</b> {{ vacancy.published_at}}</p>
-                <hr>
             </div>
+        <div style="margin-top: 5px; margin-bottom:5px; color: #1F2833; margin-start: 45% ;margin-top: 10px; margin-bottom:10px;">
+            <i class="fa-solid fa-cloud fa-3x"></i></div>
         {% endfor %}
     </div>
+<p style="color: #45A29E; margin-bottom: 40px">С любовью о UX/UI дизайнерах <i class="fa-regular fa-star"></i></p>
 {% endblock %}

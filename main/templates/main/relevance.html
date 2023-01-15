@@ -5,12 +5,19 @@
     <div style="text-align: center">
          {{ relevancepage.text|safe }}
         <section class="vacancy-graphs">
-            <p>Если вам неудобно просматривать результаты в виде таблиц, наш сайт представляет вам те же данные в виде диаграмм</p>
-            <div style="padding: 30px 10% 0 10%">
-                <img width="48%" src="{{ relevancepage.graph_up.url }}"/>
-                <img width="48%" src="{{ relevancepage.graph_middle.url }}"/>
-                <img width="48%" src="{{ relevancepage.graph_down.url }}"/>
+            <p style="margin-top: 30px;">
+                А если вам по какой либо причине не очень удобно просматривать результаты в виде таблиц, наш сайт
+                предоставляет вам возможность ознакомиться с теми же данными в виде простых диаграмм.</p>
+            <div>
+                <img width="48%" style="margin-top: 15px;" src="{{ relevancepage.graph_up.url }}"/> <br>
+                <img width="48%" style="margin-top: 15px;" src="{{ relevancepage.graph_middle.url }}"/> <br>
+                <img width="48%" style="margin-top: 15px;" src="{{ relevancepage.graph_down.url }}"/> <br>
             </div>
+            <h3 style="color: #45A29E; margin-top: 30px;">Результат анализа</h3>
+            <p style="margin-top: 30px; margin-bottom: 30px;">
+                В результате, мы можем сделать вывод, что лучшим годом по зарплатам для UX/UI дизайнеров стал далекий
+                2006 год, в то время как по количеству вакансий данная профессия оказалась на пике в 2015 году.
+            </p>
         </section>
     </div>
 {% endblock %}
