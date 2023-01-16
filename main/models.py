@@ -54,8 +54,8 @@ class Geography(models.Model):
         max_length=100,
         default='geography'
     )
-    text = models.TextField('Содержимое', default=None)
-    table = models.TextField('Таблицы анализа географии профессии', default=None)
+    text = models.TextField('Таблица о зарплате', default=None)
+    table = models.TextField('Таблица о проценте', default=None)
     graph = models.ImageField(
         'График доли вакансий по городам',
         default=None,
