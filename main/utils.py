@@ -25,8 +25,6 @@ def get_vacancies():
         params = {
             'text': 'design OR ux OR ui OR дизайн OR иллюстратор',
             'search_field': 'name',
-            'industry': '7',
-            'specializations': 1,
             'page': 1,
             'per_page': 100,
             'date_from': f'2022-12-19T00:00:00+0300',
@@ -36,7 +34,7 @@ def get_vacancies():
         vacancies = requests.get('https://api.hh.ru/vacancies', params).json()
         data = [{'id': row['id'], 'published_at': row['published_at']} for row in vacancies['items'] if not row['salary'] is None]
         result_data = []
-        for vacancy in data[len(data) - 10:]:
+        for vacancy in data[:10]:
             result_data.append(clean_vacancy(requests.get(f'https://api.hh.ru/vacancies/{vacancy["id"]}').json()))
         return result_data
     except Exception as e:
