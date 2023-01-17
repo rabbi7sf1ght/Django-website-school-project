@@ -14,14 +14,14 @@
         Мы представляем вам статистику зарплат по городам с той целью, чтобы вы лучше узнали данный рынок.
     </p>
     <h3 style="color: #45A29E">Статистика уровня зарплат по городам</h3>
-    {{ geographypage.text|safe }}
+    {{ geographypage.table_salary|safe }}
 </section>
 <section class="percent_table">
     <p style="margin-top:30px;"> Но не всегда зарплата является настолько важной. Иногда полезнее
         узнать о том, в каком городе специалистов данной профессии ищут чаще всего. В этом поможет уже следующая
             таблица, представленная ниже.</p>
     <h3 style="color: #45A29E; margin-top:30px;">Статистика доли вакансий по городам</h3>
-    {{ geographypage.table|safe }}
+    {{ geographypage.table_percent|safe }}
 </section>
 <section class="graphics">
     <h3 style="color: #45A29E; margin-top:30px;">Информация в графиках</h3>
@@ -31,11 +31,6 @@
          style="margin-bottom: 30px;"/>
 </section>
 <section class="results">
-    <h3 style="color: #45A29E; margin-top: 30px;">Результат анализа</h3>
-    <p style="margin-top: 30px; margin-bottom: 30px;">
-        Данный анализ показывает, что наибольшего размера зарплату специалисты UX/UI дизайна получают в Москве,
-        наибольшую популярность эта профессия набрала так же именно в этом городе. На втором месте
-        стабильно держится Санкт-Петербург.
-    </p>
+    {{ geographypage.result|safe }}
 </section>
 {% endblock %}

@@ -19,9 +19,6 @@
 <section class="skills_table">
     <h3 style="color: #45A29E; margin-top:30px;">Топ-10 востребованных скиллов по годам</h3>
     {{ skillspage.text|safe }}
-    <p style="margin-top: 20px; margin-bottom: 20px;">
-        Данная таблица поможет сформировать свое представление о необходимых сейчасх скиллах и даже составить
-        предсказание на будущее :)
-    </p>
+    {{ skillspage.result|safe }}
 </section>
 {% endblock %}

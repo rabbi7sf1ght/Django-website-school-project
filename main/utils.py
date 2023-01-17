@@ -25,11 +25,12 @@ def get_vacancies():
         params = {
             'text': 'design OR ux OR ui OR дизайн OR иллюстратор',
             'search_field': 'name',
+            'industry': '7',
             'specializations': 1,
             'page': 1,
             'per_page': 100,
-            'date_from': f'2022-12-26T00:00:00+0300',
-            'date_to': f'2022-12-27T00:00:00+0300',
+            'date_from': f'2022-12-19T00:00:00+0300',
+            'date_to': f'2022-12-20T00:00:00+0300',
             'order_by': 'publication_time'
         }
         vacancies = requests.get('https://api.hh.ru/vacancies', params).json()

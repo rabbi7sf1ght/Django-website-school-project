@@ -26,9 +26,9 @@ class Relevance(models.Model):
         max_length=100,
         default='relevance'
     )
-    text = models.TextField('Содержимое', default=None)
+    text = models.TextField('Таблица аналитики', default=None)
     graph_up = models.ImageField(
-        'Динамика уровня зарплат по годам для профессии',
+        'Динамика уровня зарплат по годам',
         default=None,
         upload_to='relevance'
     )
@@ -42,6 +42,10 @@ class Relevance(models.Model):
         default=None,
         upload_to='relevance'
     )
+    result = models.TextField(
+        'Результат анализа по странице',
+        default=None
+    )
 
     class Meta:
         verbose_name = 'relevance page'
@@ -54,12 +58,16 @@ class Geography(models.Model):
         max_length=100,
         default='geography'
     )
-    text = models.TextField('Таблица о зарплате', default=None)
-    table = models.TextField('Таблица о проценте', default=None)
+    table_salary = models.TextField('Таблица о зарплате', default=None)
+    table_percent = models.TextField('Таблица о проценте', default=None)
     graph = models.ImageField(
         'График доли вакансий по городам',
         default=None,
         upload_to='geography'
+    )
+    result = models.TextField(
+        'Результат анализа по странице',
+        default=None
     )
 
     class Meta:
@@ -74,6 +82,10 @@ class Skills(models.Model):
         default='skills'
     )
     text = models.TextField('Содержимое', default=None)
+    result = models.TextField(
+        'Результат анализа по странице',
+        default=None
+    )
 
     class Meta:
         verbose_name = 'skills page'
